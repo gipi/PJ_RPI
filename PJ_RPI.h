@@ -33,6 +33,12 @@
 #define BSC0_BASE 		(BCM2708_PERI_BASE + 0x804000)	// I2C controller	
 #endif	
 
+#ifdef RPI0
+#define BCM2708_PERI_BASE       0x7e000000
+#define GPIO_BASE               (BCM2708_PERI_BASE + 0x200000)	// GPIO controller. Maybe wrong. Need to be tested.
+#define BSC0_BASE 		(BCM2708_PERI_BASE + 0x205000)	// I2C controller	
+#endif
+
 #define PAGE_SIZE 		(4*1024)
 #define BLOCK_SIZE 		(4*1024)
 
